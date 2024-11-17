@@ -56,7 +56,7 @@ class SwaggerUiResource(object):
 
     def on_get(self, req, resp):
         resp.content_type = 'text/html'
-        resp.body = self.templates.render('index.html', **self.context)
+        resp.text = self.templates.render('index.html', **self.context)
 
 
 def register_swaggerui_app(app, base_url, api_url, page_title='Swagger UI', favicon_url=None, config=None):
